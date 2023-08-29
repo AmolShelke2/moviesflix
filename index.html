@@ -25,9 +25,43 @@
     <script src="./assets/js/index.js" type="module"></script>
   </head>
   <body>
-    <div class="container">
-      <!-- header component -->
-      <div class="header"></div>
-    </div>
+    <!-- header -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/logo.png"
+          width="140"
+          height="32"
+          alt="logo" />
+      </a>
+
+      <div class="search-box">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            name="search"
+            aria-label="search movies"
+            placeholder="search any movies..."
+            class="search-field"
+            search-field />
+
+          <img
+            src="./assets/images/search.png"
+            alt="search"
+            width="24"
+            height="24"
+            class="leading-icon" />
+        </div>
+
+        <button class="search-btn" search-toggler>
+          <img
+            src="./assets/images/close.png"
+            alt="close"
+            height="24"
+            width="24"
+            class="close search box" />
+        </button>
+      </div>
+    </header>
   </body>
 </html>

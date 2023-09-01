@@ -177,7 +177,17 @@ body {
 }
 
 .header .logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
   margin-inline-end: auto;
+}
+
+.header .logo h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: 1px;
 }
 
 .search-btn,

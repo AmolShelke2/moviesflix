@@ -251,6 +251,7 @@ body {
   overflow-x: overlay;
   padding-block-end: 16px;
   margin-block-end: -16px;
+  margin-bottom: 12px;
 }
 
 .slider-list::-webkit-scrollbar-thumb {

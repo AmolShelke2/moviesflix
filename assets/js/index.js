@@ -16,7 +16,7 @@ const genreList = {
 };
 
 fetchDataFromServer(
-  `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`,
+  `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`,
   function ({ genres }) {
     for (const { id, name } of genres) {
       genreList[id] = name;
@@ -55,8 +55,6 @@ const heroBanner = function ({ results: movieList }) {
       vote_average,
       id,
     } = movie;
-
-    console.log(genre_ids);
 
     const sliderItem = document.createElement("div");
     sliderItem.classList.add("slider-item");
@@ -101,7 +99,7 @@ const heroBanner = function ({ results: movieList }) {
 
     controlItemIndex++;
 
-    controlItem.innerHTML = html` <img
+    controlItem.innerHTML = ` <img
       src="${imageBaseURL}w154${poster_path}"
       alt="slide to ${title}:"
       loading="lazy"

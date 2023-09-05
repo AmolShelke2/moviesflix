@@ -53,13 +53,10 @@ const heroBanner = function ({ results: movieList }) {
   banner.ariaLabel = "Popular Movies";
 
   banner.innerHTML = `
-    <div class="banner-slider"></div>
-
-    <div class="slider-control">
-      <div class="control-inner">
-       
-      </div>
-    </div>
+  <div class="banner-slider"></div>
+  <div class="slider-control">
+    <div class="control-inner"></div>
+  </div>
   `;
 
   let controlItemIndex = 0;
@@ -86,27 +83,21 @@ const heroBanner = function ({ results: movieList }) {
 
       <div class="banner-content">
         <h2 class="heading">${title}</h2>
-
         <div class="meta-list">
           <div class="meta-item">${release_date.split("-")[0]}</div>
-
           <div class="meta-item card-badge">${vote_average.toFixed(1)}</div>
-
-          <p class="genre">${genreList.asString(genre_ids)}</p>
-
-          <p class="banner-text">${overview}</p>
-
-          <a href="./detail.html" class="btn">
-            <img
-              src="./assets/images/play_circle.png"
-              alt="play button"
-              width="24"
-              height="24"
-              aria-hidden="true" />
-
-            <span class="span"> Watch Now </span>
-          </a>
         </div>
+        <p class="genre">${genreList.asString(genre_ids)}</p>
+        <p class="banner-text">${overview}</p>
+        <a href="./detail.html" class="btn">
+          <img
+            src="./assets/images/play_circle.png"
+            alt="play button"
+            width="24"
+            height="24"
+            aria-hidden="true" />
+          <span class="span">Watch Now </span>
+        </a>
       </div>`;
 
     banner.querySelector(".banner-slider").appendChild(sliderItem);

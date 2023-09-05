@@ -1,6 +1,7 @@
 "use strict";
 
 import { api_key, fetchDataFromServer } from "./api.js";
+import { addEventOnElements } from "./global.js";
 
 export function sidebar() {
   const genreList = {};
@@ -86,7 +87,7 @@ export function sidebar() {
       overlay.classList.toggle("active");
     });
 
-    addEventonElements(sidebarClose, "click", function () {
+    addEventOnElements(sidebarClose, "click", function () {
       sidebar.classList.remove("active");
       sidebarBtn.classList.remove("active");
       overlay.classList.remove("active");

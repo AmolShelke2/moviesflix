@@ -1,6 +1,5 @@
 import { api_key, fetchDataFromServer, imageBaseURL } from "./api.js";
 import { sidebar } from "./sidebar.js";
-import { addEventOnElements } from "./global.js";
 import { createMovieCard } from "./movie-card.js";
 
 const pageContent = document.querySelector("[page-content]");
